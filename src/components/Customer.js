@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Customer = () => {
+const Customer = (props) => {
   return (
-      <span>props(userName): </span>
-      <span>props(name)</span>
+      <span>{ props.userName } </span>
+      <span>{ props.userName }</span>
   )
 }
