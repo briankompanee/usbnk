@@ -8,3 +8,5 @@ const Customer = (props) => {
     </div>
   )
 }
+
+export default React.memo(Customer);
