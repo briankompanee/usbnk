@@ -14,7 +14,7 @@ export default function App() {
 
   // filter employees from /data/employees.json to only display bankers
   // sort bankers by satisfationRating
-  const bankers = userData.filter(user => user.type === 'banker').sort((a,b) => Number(a.satisfactionRating) - Number(b.satisfactionRating));
+  const employees = userData.filter(user => user.type === 'banker').sort((a,b) => Number(a.satisfactionRating) - Number(b.satisfactionRating));
 
   // create functional component to return the current year
   const getCurrentYear = () => {
@@ -30,17 +30,18 @@ export default function App() {
           </div>
         </header>
         <main>
-            <Customer 
-              name="Firstname Lastname"
-              userName="x1234" 
-            >
-              Customer
-            </Customer>
-          {/* Add filtered bank employees do display only bankers */}
+           {/* Add Customers from Customer component */}
+          <Customer 
+            name="Firstname Lastname"
+            userName="x1234" 
+          >
+            Customer
+          </Customer>
+          {/* Add Bankers from Customer componentAdd filtered bank employees do display only bankers */}
           <BankEmployee
-           bankers={ bankers }
-          > 
-          Employees
+            employees={ employees }
+          >
+            Employees
           </BankEmployee>
         </main>
         <footer>
