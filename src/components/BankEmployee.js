@@ -1,19 +1,18 @@
-import React from "react";
+import React from 'react';
 
-// 1. filter employees from /data/employees.json to only display bankers
-// 2. sort bankers by satisfationRating
-
-const BankEmployee = (props) => {
+const BankEmployee = (props) => { 
+  const { bankers } = props;
   return (
-    <div className="bank-employee">
-      <span>{props.user.userName}</span>
-      <br/>
-      <span>Name: { props.user.name }</span>
-      <br/>
-      <span>Customer Satisfaction Rating: {props.user.satisfactionRating}</span>
-    </div>
-  )
-
-};
+    <>
+      {bankers.map(banker => (
+        <div key={banker.id} className="bank-employee-info">
+          <div>{banker.userName}</div>
+          <div>Name: {banker.name}</div>
+          <div>Customer Satisfaction Rating: {banker.satisfactionRating}</div>
+        </div>
+      ))}
+    </>
+  );
+}
 
 export default React.memo(BankEmployee);
