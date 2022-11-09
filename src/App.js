@@ -11,7 +11,9 @@ Import the JSON file */
 import userData from "./data/employees.json";
 
 export default function App() {
-  const bankers = [...userData]
+
+  // filter employees from /data/employees.json to only display bankers
+  const bankers = userData.filter(user => user.type === 'banker');
 
   return (
     <> 
