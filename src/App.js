@@ -16,6 +16,11 @@ export default function App() {
   // sort bankers by satisfationRating
   const bankers = userData.filter(user => user.type === 'banker').sort((a,b) => Number(a.satisfactionRating) - Number(b.satisfactionRating));
 
+  // create functional component to return the current year
+  const getCurrentYear = () => {
+    return new Date().getFullYear();  
+  };
+
   return (
     <> 
       <div className="App">
@@ -39,7 +44,7 @@ export default function App() {
           </BankEmployee>
         </main>
         <footer>
-          <p>&copy; 2021 U.S.Bank</p>
+          <p>&copy; { getCurrentYear() } U.S.Bank</p>
         </footer>
       </div>
     </>
