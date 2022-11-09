@@ -13,7 +13,8 @@ import userData from "./data/employees.json";
 export default function App() {
 
   // filter employees from /data/employees.json to only display bankers
-  const bankers = userData.filter(user => user.type === 'banker');
+  // sort bankers by satisfationRating
+  const bankers = userData.filter(user => user.type === 'banker').sort((a,b) => Number(a.satisfactionRating) - Number(b.satisfactionRating));
 
   return (
     <> 
