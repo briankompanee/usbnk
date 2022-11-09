@@ -12,7 +12,12 @@ export default function App() {
           </div>
         </header>
         <main>
-          {/* Add and debug Customer component */}
+            <Customer 
+              name="Firstname Lastname"
+              userName="x1234" 
+            >
+              Customer
+            </Customer>
           {/* Add filtered bank employees do display only bankers */}
         </main>
         <footer>
