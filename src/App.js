@@ -1,6 +1,9 @@
-import React from "react";
-import './styles/main.scss'
+import React from 'react';
+
+import Customer from './components/Customer';
+
 import USBlogo from './images/usb-logo.svg';
+import './styles/main.scss';
 
 export default function App() {
   return (
