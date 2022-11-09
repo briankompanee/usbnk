@@ -45,6 +45,7 @@ export default function App() {
           </BankEmployee>
         </main>
         <footer>
+          {/* Add dynamic date to footer */}
           <p>&copy; { getCurrentYear() } U.S.Bank</p>
         </footer>
       </div>
