@@ -26,7 +26,7 @@ export default function App() {
       <div className="App">
         <header>
           <div className="logo-container">
-            <img src={USBlogo} alt="U.S. Bank" />
+            <img src={ USBlogo } alt="U.S. Bank" />
           </div>
         </header>
         <main>
